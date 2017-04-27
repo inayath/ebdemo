@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module xmlns="urn:jboss:module:1.1" name="org.apache.cxf.impl" slot="${cxf.version}">
+	<resources>
+		<resource-root path="aopalliance-${aopalliance.version}.jar" />
+		<resource-root path="asm-${asm.version}.jar" />
+		<resource-root path="commons-codec-${commons-codec.version}.jar" />
+		<resource-root path="cxf-core-${cxf.version}.jar" />
+		<resource-root path="cxf-rt-bindings-soap-${cxf.version}.jar" />
+		<resource-root path="cxf-rt-bindings-xml-${cxf.version}.jar" />
+		<resource-root path="cxf-rt-databinding-jaxb-${cxf.version}.jar" />
+		<resource-root path="cxf-rt-features-clustering-${cxf.version}.jar" />
+		<resource-root path="cxf-rt-frontend-jaxrs-${cxf.version}.jar" />
+		<resource-root path="cxf-rt-frontend-jaxws-${cxf.version}.jar" />
+		<resource-root path="cxf-rt-frontend-simple-${cxf.version}.jar" />
+		<resource-root path="cxf-rt-rs-client-${cxf.version}.jar" />
+		<resource-root path="cxf-rt-rs-security-oauth-${cxf.version}.jar" />
+		<resource-root path="cxf-rt-transports-http-${cxf.version}.jar" />
+		<resource-root path="cxf-rt-transports-http-hc-${cxf.version}.jar" />
+		<resource-root path="cxf-rt-ws-addr-${cxf.version}.jar" />
+		<resource-root path="cxf-rt-wsdl-${cxf.version}.jar" />
+		<resource-root path="cxf-rt-ws-policy-${cxf.version}.jar" />
+		<resource-root path="javax.annotation-api-${javax.annotation-api.version}.jar" />
+		<resource-root path="javax.ws.rs-api-${javax.ws.rs-api.version}.jar" />
+		<resource-root path="jaxb-core-${jaxb.version}.jar" />
+		<resource-root path="jaxb-impl-${jaxb.version}.jar" />
+		<resource-root path="log4j-${log4j.version}.jar" />
+		<resource-root path="neethi-${neethi.version}.jar" />
+		<resource-root path="oauth-${oauth.version}.jar" />
+		<resource-root path="oauth-provider-${oauth.version}.jar" />
+        <!--resource-root path="slf4j-api-${slf4j-api.version}.jar"/>
+        <resource-root path="slf4j-log4j12-${slf4j-log4j12.version}.jar"/-->
+		<resource-root path="stax2-api-${stax2-api.version}.jar" />
+		<resource-root path="woodstox-core-asl-${woodstox-core-asl.version}.jar" />
+		<resource-root path="wsdl4j-${wsdl4j.version}.jar" />
+		<resource-root path="xml-resolver-${xml-resolver.version}.jar" />
+		<resource-root path="xmlschema-core-${xmlschema-core.version}.jar" />
+	</resources>
+
+	<dependencies>	
+		<module name="javax.api" />
+		<module name="javax.annotation.api" />
+		<module name="javax.jms.api" />
+		<module name="javax.jws.api" />
+		<module name="org.apache.httpcomponents.client" export="true"/>
+		<module name="javax.mail.api" />
+		<module name="javax.resource.api" />
+		<module name="javax.servlet.api" />
+		<module name="javax.xml.bind.api" services="import" />
+		<module name="com.sun.xml.bind" services="import" />
+		<module name="javax.xml.soap.api" />
+		<module name="javax.xml.stream.api" />
+		<module name="javax.xml.ws.api" />
+		<module name="org.slf4j" />
+		<module name="org.apache.commons.logging" />
+		<module name="org.springframework" optional="true">
+			<imports>
+				<include path="META-INF" />
+			</imports>
+		</module>
+	</dependencies>
+</module>

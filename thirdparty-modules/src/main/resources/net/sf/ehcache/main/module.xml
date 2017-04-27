@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module xmlns="urn:jboss:module:1.1" name="net.sf.ehcache">
+	<resources>
+		<resource-root path="ehcache-${ehcache.version}.jar" />
+	</resources>
+	<dependencies>
+	    <system export="true">  
+            <paths>  
+                <path name="org/xml/sax"/>  
+                <path name="org/xml/sax/helpers"/>  
+                <path name="javax/xml/parsers"/>
+                <path name="javax/naming"/>
+            </paths>  
+        </system>
+        <module name="org.slf4j" />
+		<module name="javaee.api">
+			<imports>
+				<exclude-set>
+					<path name="javax/ws/rs" />
+					<path name="javax/ws/rs/core" />
+					<path name="javax/ws/rs/ext" />
+				</exclude-set>
+			</imports>
+		</module>
+	</dependencies>
+</module>

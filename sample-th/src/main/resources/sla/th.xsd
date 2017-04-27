@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/test/"
+	xmlns:tns="http://www.example.org/test/" elementFormDefault="qualified">
+
+	<element name="request">
+		<complexType>
+			<sequence>
+				<element ref="tns:person" minOccurs="1" maxOccurs="1" />
+			</sequence>
+		</complexType>
+	</element>
+
+	<element name="person">
+		<complexType>
+			<sequence>
+				<element name="requestid">
+					<simpleType>
+						<restriction base="string" />
+					</simpleType>
+				</element>
+				<element name="firstname">
+					<simpleType>
+						<restriction base="string" />
+					</simpleType>
+				</element>
+				<element name="lastname">
+					<simpleType>
+						<restriction base="string" />
+					</simpleType>
+				</element>
+				<element name="middlename">
+					<simpleType>
+						<restriction base="string" />
+					</simpleType>
+				</element>
+				<element name="lastnamesuffix">
+					<simpleType>
+						<restriction base="string" />
+					</simpleType>
+				</element>
+				<element name="gender" type="string" />
+				<element name="dob" type="date" />
+			</sequence>
+		</complexType>
+	</element>
+	<element name="response">
+		<complexType>
+			<sequence>
+				<element name="status" type="string" minOccurs="1"
+					maxOccurs="1" />
+			</sequence>
+		</complexType>
+	</element>
+</schema>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component
+    xmlns="http://maven.apache.org/plugins/maven-assembly-plugin/component/1.1.2"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/plugins/maven-assembly-plugin/component/1.1.2 http://maven.apache.org/xsd/component-1.1.2.xsd">
+    <dependencySets>
+        <dependencySet>
+            <includes>
+                <include>org.apache.camel:camel-*</include>
+                <include>org.freemarker:freemarker</include>
+                <include>com.fasterxml.jackson.module:jackson-*</include>
+                <include>com.fasterxml.jackson.core:jackson-*</include>
+                <include>net.sf.json-lib:json-lib</include>
+                <include>net.sf.ezmorph:ezmorph</include>
+                <include>org.quartz-scheduler:quartz</include>
+                <!-- <include>org.mvel:mvel2</include> -->
+                <include>net.sf.saxon:Saxon-HE</include>
+                <include>org.slf4j:slf4j-api</include>
+            </includes>
+            <outputDirectory>org/apache/camel/main</outputDirectory>
+            <useProjectArtifact>false</useProjectArtifact>
+        </dependencySet>
+    </dependencySets>
+</component>
+

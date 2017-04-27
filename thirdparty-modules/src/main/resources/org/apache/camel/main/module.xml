@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module xmlns="urn:jboss:module:1.1" name="org.apache.camel">
+	<resources>
+		<resource-root path="camel-core-${camel.version}.jar" />
+		<resource-root path="camel-zipfile-${camel.version}.jar" />
+		<resource-root path="camel-cxf-${camel.version}.jar" />
+		<resource-root path="camel-jackson-${camel.version}.jar" />
+		<resource-root path="camel-cxf-transport-${camel.version}.jar" />
+		<resource-root path="quartz-${quartz.version}.jar" />
+		<resource-root path="camel-freemarker-${camel.version}.jar" />
+		<resource-root path="camel-jms-${camel.version}.jar" />
+		<resource-root path="camel-mvel-${camel.version}.jar" />
+		<resource-root path="camel-spring-${camel.version}.jar" />
+		<resource-root path="camel-stream-${camel.version}.jar" />
+		<resource-root path="camel-saxon-${camel.version}.jar" />
+		<resource-root path="camel-quartz2-${camel.version}.jar" />
+		<resource-root path="camel-http4-${camel.version}.jar" />
+		<resource-root path="camel-xmljson-${camel.version}.jar" />
+		<resource-root path="json-lib-${json-lib.version}-${json-lib.classifier}.jar" />
+		<resource-root path="ezmorph-${ezmorph.version}.jar"></resource-root>
+		<!-- resource-root path="camel-jetty9-${camel.version}.jar" /-->
+		<resource-root path="freemarker-${freemarker.version}.jar" />
+		<!-- <resource-root path="mvel2-${mvel2.version}.jar" /> -->
+		<resource-root path="Saxon-HE-${saxon-he.version}.jar" />
+	</resources>
+	<dependencies>
+		<module name="org.apache.commons.lang" />
+		<module name="org.apache.commons.collections" />	
+		<module name="org.apache.commons.beanutils" />	
+		<module name="org.apache.commons.codec" />		
+		<module name="org.apache.httpcomponents" export="true"/>
+		<module name="javaee.api">
+			<imports>
+				<exclude-set>
+					<path name="javax/ws/rs" />
+					<path name="javax/ws/rs/core" />
+					<path name="javax/ws/rs/ext" />
+				</exclude-set>
+			</imports>
+		</module>
+		<module name="org.slf4j" />
+		<module name="javax.xml.bind.api" />
+		<module name="javax.api" />
+		<module name="sun.jdk" />
+		<module name="nu.xom" />
+		<module name="org.codehaus.jackson.jackson-jaxrs" />
+		<module name="org.apache.commons.logging" />
+		<module name="org.mvel" export="true" />
+		<module name="org.springframework" export="true" />
+		<module name="org.apache.cxf.impl" slot="${cxf.version}">
+			<imports>
+				<include path="META-INF/cxf" />
+				<include path="META-INF" />
+			</imports>
+			<exports>
+				<include path="META-INF/cxf" />
+				<include path="META-INF" />
+			</exports>
+		</module>
+	</dependencies>
+</module>

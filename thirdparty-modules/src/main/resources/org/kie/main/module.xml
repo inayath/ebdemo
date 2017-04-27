@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module xmlns="urn:jboss:module:1.1" name="org.kie">
+	<resources>
+		<resource-root path="drools-core-${kie.camel.version}.jar" />
+		<resource-root path="drools-compiler-${kie.camel.version}.jar" />
+		<resource-root path="drools-decisiontables-${kie.camel.version}.jar" />
+		<resource-root path="drools-templates-${kie.camel.version}.jar" />
+		<resource-root path="jbpm-flow-${kie.camel.version}.jar" />
+		<resource-root path="kie-api-${kie.camel.version}.jar" />
+		<resource-root path="kie-internal-${kie.camel.version}.jar" />
+		<resource-root path="kie-spring-${kie.camel.version}.jar" />
+		<resource-root path="kie-camel-${kie.camel.version}.jar" />
+		<!-- Do not remove this empty path below, it's a workaround to fix an issue
+         in loading KModuleBeanFactoryPostProcessor within EAP6 -->
+        <resource-root path=""/>
+	</resources>
+	<dependencies>
+		<module name="org.apache.commons.codec" />
+		<module name="org.slf4j" />
+		<module name="org.mvel" />
+		<module name="org.joda.time" slot="2.7" export="true" />
+		<module name="org.apache.poi" export="true" />
+		<module name="org.apache.camel" export="true" />
+		<module name="org.springframework" export="true" />
+		<module name="javax.xml.bind.api" />
+		<module name="javax.api" />
+		<module name="com.thoughtworks.xstream" />
+	</dependencies>
+</module>
