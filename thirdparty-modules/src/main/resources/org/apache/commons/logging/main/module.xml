@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<module xmlns="urn:jboss:module:1.1" name="org.apache.commons.logging">
-	<resources>
-		<resource-root path="commons-logging-${commons-logging.version}.jar" />
-	</resources>
-</module>
